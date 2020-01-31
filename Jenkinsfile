@@ -9,6 +9,7 @@ pipeline {
                 branch 'master'
             }
             steps {
+		    		echo "Master Stage"
 				echo "${some_name}"
             }
         }
@@ -17,6 +18,7 @@ pipeline {
                 equals expected: "jeff", actual: some_name
             }
             steps {
+		    		echo "Equal Expected Stage"
 				echo "${some_name}"
             }
         }
@@ -25,6 +27,7 @@ pipeline {
                 branch 'dev'
             }
             steps {
+		    		echo "Dev Stage"
 				echo "${some_name}"
             }
         }
