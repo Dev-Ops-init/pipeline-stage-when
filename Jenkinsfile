@@ -1,5 +1,9 @@
 pipeline {
     agent any
+	triggers {
+           	upstream 'test1'
+	}
+
 	environment{
 		some_name="jeff"
 	}	
