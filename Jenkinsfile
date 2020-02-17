@@ -1,3 +1,11 @@
+properties([
+    buildDiscarder(
+        logRotator(
+            artifactNumToKeepStr: '20',
+            numToKeepStr: '20')
+    ),
+    disableConcurrentBuilds()
+])
 pipeline {
     agent any
 	triggers {
