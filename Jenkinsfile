@@ -21,11 +21,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-				echo "${some_name}"
-		    script {
-			BRANCH = sh(git rev-parse --abbrev-ref HEAD)
-		    	echo "Branch is : ${BRANCH}"
-		    }
+				echo "${some_name}
             }
         }
         stage('Equal expected') {
