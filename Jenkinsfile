@@ -22,7 +22,7 @@ pipeline {
             }
             steps {
 				echo "${some_name}"
-		    BRANCH = (git rev-parse --abbrev-ref HEAD)
+		    BRANCH = sh(git rev-parse --abbrev-ref HEAD)
 		    echo "Branch is : ${BRANCH}"
             }
         }
