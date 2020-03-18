@@ -18,6 +18,7 @@ pipeline {
             }
             steps {
 				echo "${some_name}
+		    sh 'cat test.json'
             }
         }
         stage('Dev branch') {
