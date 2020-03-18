@@ -21,7 +21,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-			sh	'echo "${some_name}'
+			sh	'echo "${some_name}"'
             }
         }
         stage('Equal expected') {
