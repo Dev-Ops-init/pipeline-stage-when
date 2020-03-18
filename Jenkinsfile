@@ -12,9 +12,9 @@ pipeline {
 		some_name="jeff"
 	}	
     stages {
-        stage('Master branch') {
+        stage('Condition branch') {
             when {
-                changeset '*/*.json'
+                changeset "*/*.json"
             }
             steps {
 				echo "${some_name}
