@@ -7,17 +7,13 @@ properties([
     disableConcurrentBuilds()
 ])
 pipeline {
-    agent any
-	environment{
-		some_name="jeff"
-	}	
+    agent any	
     stages {
         stage('Condition branch') {
             when {
-                changeset "*/*.json"
+                changeset "*.json"
             }
             steps {
-				echo "${some_name}
 		    sh 'cat test.json'
             }
         }
@@ -26,8 +22,8 @@ pipeline {
                 branch 'dev'
             }
             steps {
-				echo "${some_name}"
-            }
+		echo "Hello World"
+	    }
         }
     }
 }
