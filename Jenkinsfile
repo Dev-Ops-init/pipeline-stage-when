@@ -19,10 +19,10 @@ pipeline {
         }
         stage('Dev branch') {
             when {
-                branch 'dev'
+                branch 'change-set'
             }
             steps {
-		echo "Hello World"
+		echo "Hello World : Condition branch"
 	    }
         }
     }
